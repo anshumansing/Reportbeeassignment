@@ -1,0 +1,118 @@
+
+html, body{
+    font-size: 100%;
+	font-family: 'Open Sans', sans-serif;
+	background:#ffffff;
+}
+ul li,ol li{
+	font-size:14px;
+}
+p{
+	margin:0;
+}
+h1,h2,h4,h5,h6,a{
+	font-family:'Ubuntu', sans-serif;
+	margin:0;
+}
+h3{
+ background-color: #37931E; 
+}
+ul,label{
+	margin:0;
+	padding:0;
+}
+body a:hover{
+	text-decoration:none;
+}
+/*-- header --*/
+
+span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
+	position: relative !important;
+}
+
+.snipcart-thumb a {
+    display: block;
+    text-align: center;
+}
+.my-cart-icon-affix i {
+    background: #84C639 !important;
+}
+.agile_top_brand_left_grid {
+    position: relative;
+    display: block;
+}
+
+
+.agileits_header{
+	background:#212121;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: none;
+}
+
+.right
+{
+float: left;
+width:80%;
+	
+}
+.left{
+	width:20%;
+	float:right;
+	background:#84C639;
+}
+
+.agile_top_brand_left_grid{
+	background: #FFFFFF;
+    padding: .5em;
+    border: 1px solid #BEBEBE;
+	position:relative;
+}
+.agile_top_brand_left_grid_pos{
+	position:absolute;
+	top:0%;
+	left:0%;
+}
+.right5{
+	padding:1em;
+	border:1px solid #D7D7D7;
+}
+.right5 img{
+	margin:0 auto;
+}
+
+.right5 p{
+	color:#212121;
+	margin:1.5em 0 1em;
+	line-height:1.5em;
+	text-transform:capitalize;
+	font-size:14px;
+}
+.right5 h4,.agileinfo_single_right_snipcart h4{
+	font-weight:600;
+	font-size:1em;
+	color:#212121;
+}
+.right5 h4 span,.agileinfo_single_right_snipcart h4 span{
+	font-weight:300;
+	text-decoration:line-through;
+	padding-left:1em;
+}
+.navbar{
+	background: #008000;
+	color: #FFFFFF;
+}
+.checkout-right-basket span {
+    margin-left: 1em;
+}
+
+.panel{
+	padding: 5px;
+}
+.list-group{
+	position: fixed;
+	right:5px;
+	width:300px;
+}
