@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <title>Shopping Cart!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style="color:#FFF" >Online Shopping</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                            <a class="view-cart" data-toggle="dropdown" role="button"><i class="fa fa-shopping-cart"style="color:antiquewhite" ></i> Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- flexbox grid thing for Division  -->
+    <div class="blocks">
+
+        <!-- block 1 Items -->
+        <div class="column">
+            <!-- List and grid view switch icons -->
+            <div class="buttons">
+                <button id="grid" type="button" class="btn pull-right"><i class="fa fa-th" aria-hidden="true"></i></button>
+                <button id="list" type="button" class="btn pull-right"><i class="fa fa-th-list" aria-hidden="true"></i></button>
+            </div>
+
+            <div id="container">
+                <ul class="list">
+                    <li>
+                        <div class="card-container">
+                            <div class="card item" data-name="NIKE ABC" data-price="2500">
+                                <div class="parent">
+                                    <div class="child">
+                                        <img src="images/1.png" class="proimage">
+                                    </div>
+                                    <!-- Description Div -->
+                                    <div class="child">
+                                        <h1><b>NIKE ABC  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
+                                        <h2>$2500</h2>
+                                     
+                                    </div>
+                                    <!-- Add to cart button div -->
+                                    <div class="child">
+                                        <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="card-container">
+                            <div class="card item" data-name="NIKE XYZ" data-price="3000">
+                                <div class="parent">
+                                    <div class="child">
+                                        <img src="images/2.png" class="proimage">
+                                    </div>
+                                    <!-- Description Div -->
+                                    <div class="child">
+                                        <h1><b>NIKE XYZ  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
+                                        <h2>$3000</h2>
+                                    </div>
+                                    <!-- Add to cart button div -->
+                                    <div class="child">
+                                        <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-container">
+                            <div class="card item" data-name="NIKE PQR" data-price="3500">
+                                <div class="parent">
+                                    <div class="child">
+                                        <img src="images/3.png" class="proimage">
+                                    </div>
+                                    <!-- Description Div -->
+                                    <div class="child">
+                                        <h1><b>NIKE PQR  <span><button class="instock"style="background-color:#B3B3B3">  Out of stock  </button></span></b></h1>>
+                                        <h2>$3500</h2>
+                                    </div>
+                                    <!-- Add to cart button div -->
+                                    <div class="child">
+                                        <button class="add-to-cart" style="background-color:#B3B3B3 "> ADD TO CART </button>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-container">
+                            <div class="card item" data-name="NIKE STU" data-price="4000">
+                                <div class="parent">
+                                    <div class="child">
+                                        <img src="images/4.png" class="proimage">
+                                    </div>
+                                    <!-- Description Div -->
+                                    <div class="child">
+                                        <h1><b>NIKE STU  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
+                                        <h2>$4000</h2>
+                                    </div>
+                                    <!-- Add to cart button div -->
+                                    <div class="child">
+                                        <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="card-container">
+                            <div class="card item" data-name="NIKE XYZ" data-price="4500">
+                                <div class="parent">
+                                    <div class="child">
+                                        <img src="images/5.png" class="proimage">
+                                    </div>
+                                    <!-- Description Div -->
+                                    <div class="child">
+                                        <h1><b>NIKE XYZ  <span><button class="instock"style="background-color:#B3B3B3">  Out of stock  </button></span></b></h1>>
+                                        <h2>$4500</h2>
+                                    </div>
+                                    <!-- Add to cart button div -->
+                                    <div class="child">
+                                        <button class="add-to-cart" style="background-color:#B3B3B3 "> ADD TO CART </button>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="card-container">
+                            <div class="card item" data-name="NIKE MNO" data-price="5000">
+                                <div class="parent">
+                                    <div class="child">
+                                        <img src="images/6.png" class="proimage">
+                                    </div>
+                                    <!-- Description Div -->
+                                    <div class="child">
+                                        <h1><b>NIKE MNO  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
+                                        <h2>$5000</h2>
+                                    </div>
+                                    <!-- Add to cart button div -->
+                                    <div class="child">
+                                        <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- block 2 Shopping cart -->
+        <div class= "left">
+                
+                
+                 
+                <h3><b>Your Cart</b></h3>
+                      
+                             
+                        <li class="list-group-item"><h3>NIKE ABC  =  2500</h1> </li>
+                          <li class="list-group-item"><h3>NIKE XYZ =   3000</h1> </li>
+                          <li class="list-group-item"><p><h3>NIKE XYZ =   4000</h1> </li>
+
+                          
+                         <tr>
+                         <li class="list-group-item"><td> Total <input type="text" name="Total" value="$9500" size="7"></td></li>
+                           </tr>
+                
+                
+                      </form>
+                    </div>
+    </div>
+
+   
+            
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
