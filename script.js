@@ -1,0 +1,64 @@
+var cart = [];
+
+var updateCart = function () {
+  $('.cart-list').empty();
+  $('.total').html('0');
+
+  for (var i = 0; i < cart.length; i ++) {
+    var template = Handlebars.compile($('#item-template').html())
+    var newItem = template(cart[i]);
+
+    $('.cart-list').append(newItem);
+    $('.total').html(calculateTotal());
+  }
+  // Update Counter on Top
+  $('.counter')[0].textContent = cart.length;
+}
+
+var calculateTotal = function () {
+  var total = 0;
+
+  for (var i = 0; i < cart.length; i ++) {
+    total += cart[i].price;
+  }
+
+  return total;
+}
+
+var addItem = function (item) {
+  cart.push(item);
+}
+
+var clearCart = function () {
+  cart = [];
+  updateCart();
+}
+
+
+$('.add-to-cart').on('click', function () {
+  var item = $(this).closest('.item').data();
+  addItem(item);
+  
+  updateCart();
+});
+
+$('.clear-cart').on('click', function () {
+  clearCart();
+});
+
+$('.remove-cart').on('click', function () {
+  $(this).parent('p').remove();
+});
+
+updateCart();
+
+// Button Clicks for GridViews and ListViews
+$('#grid').on('click', function () {
+  $('#container ul').removeClass('list').addClass('grid');
+});
+
+$('#list').on('click', function () {
+  $('#container ul').removeClass('grid').addClass('list');
+});
+
+
