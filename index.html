@@ -48,7 +48,28 @@
             </div>
 
             <div id="container">
-                <ul class="list">
+               <ul id="list"></ul>
+                        <script>
+                         
+                    
+                          var xhttp = new XMLHttpRequest();
+                          xhttp.onreadystatechange = function() {
+                              if (this.readyState == 4 && this.status == 200) {
+                                var response = JSON.parse(xhttp.responseText);
+                                var people = response.people;
+                    
+                                var output = '';
+                                for(var i = 0;i < people.length;i++){
+                                  output += '<li>'+people[i].name+'</li>';
+                                }
+                                document.getElementById('list').innerHTML = output;
+                              }
+                          };
+                          xhttp.open("GET", "list.json", true);
+                          xhttp.send();
+                    
+                        </script>
+                <!--
                     <li>
                         <div class="card-container">
                             <div class="card item" data-name="NIKE ABC" data-price="2500">
@@ -56,13 +77,13 @@
                                     <div class="child">
                                         <img src="images/1.png" class="proimage">
                                     </div>
-                                    <!-- Description Div -->
+                         
                                     <div class="child">
                                         <h1><b>NIKE ABC  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
                                         <h2>$2500</h2>
                                      
                                     </div>
-                                    <!-- Add to cart button div -->
+                                   
                                     <div class="child">
                                         <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
                                     </div>
@@ -81,12 +102,12 @@
                                     <div class="child">
                                         <img src="images/2.png" class="proimage">
                                     </div>
-                                    <!-- Description Div -->
+                                  
                                     <div class="child">
                                         <h1><b>NIKE XYZ  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
                                         <h2>$3000</h2>
                                     </div>
-                                    <!-- Add to cart button div -->
+                            
                                     <div class="child">
                                         <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
                                     </div>
@@ -104,12 +125,12 @@
                                     <div class="child">
                                         <img src="images/3.png" class="proimage">
                                     </div>
-                                    <!-- Description Div -->
+                              
                                     <div class="child">
                                         <h1><b>NIKE PQR  <span><button class="instock"style="background-color:#B3B3B3">  Out of stock  </button></span></b></h1>>
                                         <h2>$3500</h2>
                                     </div>
-                                    <!-- Add to cart button div -->
+                               
                                     <div class="child">
                                         <button class="add-to-cart" style="background-color:#B3B3B3 "> ADD TO CART </button>
                                     </div>
@@ -127,12 +148,12 @@
                                     <div class="child">
                                         <img src="images/4.png" class="proimage">
                                     </div>
-                                    <!-- Description Div -->
+                                
                                     <div class="child">
                                         <h1><b>NIKE STU  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
                                         <h2>$4000</h2>
                                     </div>
-                                    <!-- Add to cart button div -->
+                          
                                     <div class="child">
                                         <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
                                     </div>
@@ -151,12 +172,12 @@
                                     <div class="child">
                                         <img src="images/5.png" class="proimage">
                                     </div>
-                                    <!-- Description Div -->
+                              
                                     <div class="child">
                                         <h1><b>NIKE XYZ  <span><button class="instock"style="background-color:#B3B3B3">  Out of stock  </button></span></b></h1>>
                                         <h2>$4500</h2>
                                     </div>
-                                    <!-- Add to cart button div -->
+                                  
                                     <div class="child">
                                         <button class="add-to-cart" style="background-color:#B3B3B3 "> ADD TO CART </button>
                                     </div>
@@ -175,12 +196,12 @@
                                     <div class="child">
                                         <img src="images/6.png" class="proimage">
                                     </div>
-                                    <!-- Description Div -->
+                            
                                     <div class="child">
                                         <h1><b>NIKE MNO  <span><button class="instock"style="background-color:#F7DC6F">  Instock  </button></span></b></h1>>
                                         <h2>$5000</h2>
                                     </div>
-                                    <!-- Add to cart button div -->
+                       
                                     <div class="child">
                                         <button class="add-to-cart" style="background-color:#F5B041 "> ADD TO CART </button>
                                     </div>
@@ -191,7 +212,7 @@
                             </div>
                         </div>
                     </li>
-
+-->
                 </ul>
             </div>
 
